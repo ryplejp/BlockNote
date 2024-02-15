@@ -9,7 +9,6 @@ import {
 } from "@blocknote/react";
 import { Alert, insertAlert } from "../customblocks/Alert";
 import { Button } from "../customblocks/Button";
-import styles from "./Editor.module.css";
 
 type WindowWithProseMirror = Window & typeof globalThis & { ProseMirror: any };
 
@@ -38,9 +37,6 @@ const allItems = [...defaultItems, ...customItems];
 
 export default function Editor() {
   const editor = useBlockNote({
-    domAttributes: {
-      editor: { class: styles.editor, "data-test": "editor" },
-    },
     blockSpecs,
   });
 

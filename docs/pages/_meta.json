@@ -1,0 +1,24 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": true
+    }
+  },
+  "docs": {
+    "title": "Docs",
+    "display": "children"
+  },
+  "examples": {
+    "title": "Examples",
+    "display": "children"
+  },
+  "partner": "Partner",
+  "contact": "Contact us"
+}
