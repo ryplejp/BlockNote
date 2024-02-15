@@ -18,9 +18,6 @@ import { Button, insertButton } from "../customblocks/Button";
 import { Embed, insertEmbed } from "../customblocks/Embed";
 import { Image, insertImage } from "../customblocks/Image";
 import { Separator, insertSeparator } from "../customblocks/Separator";
-import styles from "./Editor.module.css";
-
-type WindowWithProseMirror = Window & typeof globalThis & { ProseMirror: any };
 
 const blockSpecs = {
   ...defaultBlockSpecs,
@@ -72,16 +69,13 @@ const getSlashMenuItems = async <
 
 export default function Editor() {
   const editor = useBlockNote({
-    domAttributes: {
-      editor: { class: styles.editor, "data-test": "editor" },
-    },
     blockSpecs,
   });
 
   console.log(editor);
 
   // Give tests a way to get prosemirror instance
-  (window as WindowWithProseMirror).ProseMirror = editor?._tiptapEditor;
+  (window as any).ProseMirror = editor?._tiptapEditor;
 
   return (
     <BlockNoteView editor={editor}>
