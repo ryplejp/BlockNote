@@ -56,13 +56,11 @@ import { transformPasted } from "./transformPasted";
 
 // CSS
 import { checkDefaultBlockTypeInSchema } from "../blocks/defaultBlockTypeGuards";
-import "./Block.css";
 import { BlockNoteSchema } from "./BlockNoteSchema";
 import {
   BlockNoteTipTapEditor,
   BlockNoteTipTapEditorOptions,
 } from "./BlockNoteTipTapEditor";
-import "./editor.css";
 
 export type BlockNoteEditorOptions<
   BSchema extends BlockSchema,

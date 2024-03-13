@@ -31,7 +31,6 @@ import {
   removeBlockNoteCSSVariables,
 } from "./BlockNoteTheme";
 import { EditorContent } from "./EditorContent";
-import "./styles.css";
 
 const mantineTheme = {
   // Removes button press effect
